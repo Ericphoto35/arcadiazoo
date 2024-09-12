@@ -40,7 +40,7 @@ security:
          - { path: ^/admin, roles: ROLE_ADMIN }
          - { path: ^/emp, roles: ROLE_EMP }
          - { path: ^/veto, roles: ROLE_VETO }
-         - { path: ^/registrer, roles: ROLE_ADMIN }
+        
 
 when@test:
     security:
