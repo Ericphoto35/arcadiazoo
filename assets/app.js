@@ -1,4 +1,7 @@
 import './bootstrap.js';
+
+
+// Votre code JavaScript personnalisé ici
 /*
  * Welcome to your app's main JavaScript file!
  *

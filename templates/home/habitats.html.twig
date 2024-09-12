@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HabitatsController!{% endblock %}
+
+{% block body %}
+
+	<div class="hero-scene text-center text-white">
+		<div class="hero-scene-content">
+
+			<h1>Les Habitats</h1>
+			<p>Les différents habitats du ZOO Arcadia</p>
+
+		</div>
+	</div>
+	<article class="text-black">
+		{% for habitats in habitats %}
+			<div class=" p-4 text-white{% if loop.index is odd %} bg-dark{% endif %}">
+				<div class="container p-2">
+					<h2 class="text-center text-white p-2">{{habitats.habitatsnom}}</h2>
+					<div class="row row-cols-1 row-cols-lg-3">
+						<div class="col">
+							<p class="text-center mt-3">
+								{{habitats.habitatsdescription | raw}}
+							</p>
+							<div class="text-center">
+							<a href="/animals" class="btn btn-secondary">En savoir plus</a>
+							</div>
+						</div>
+						<div class="col ">
+							<div class="image-card text-black">
+								<img src="/uploads/{{habitats.habitatsimg}}" class="rounded w-100" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+</article>{% endblock %}
+
+
