@@ -2,6 +2,5 @@ framework:
     asset_mapper:
         paths:
             - assets/
-        excluded_patterns:
-            - '*/README.md'
-        json_manifest_path: '%kernel.project_dir%/public/assets/manifest.json'
+        
+        
