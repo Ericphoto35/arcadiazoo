@@ -5,7 +5,7 @@ namespace App\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 #[MongoDB\Document]
-class DocAnimal1
+class DocAnimal2
 {
     #[MongoDB\Id]
     protected $id;

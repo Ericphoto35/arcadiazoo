@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Document\DocAnimal1;
+use App\Document\DocAnimal2;
 use App\Entity\Habitats;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -24,15 +25,15 @@ class AnimalsController extends AbstractController
         }
 
         $animalDocuments = [
-            'loulou' => DocAnimal1::class,
-            'celi' => DocAnimal1::class,
-            'coco' => DocAnimal1::class,
-            'coco2' => DocAnimal1::class,
-            'hector' => DocAnimal1::class,
-            'zaza' => DocAnimal1::class,
-            'joseph' => DocAnimal1::class,
-            'sophie' => DocAnimal1::class,
-            'leo' => DocAnimal1::class, 
+            'loulou' => DocAnimal2::class,
+            'celi' => DocAnimal2::class,
+            'coco' => DocAnimal2::class,
+            'coco2' => DocAnimal2::class,
+            'hector' => DocAnimal2::class,
+            'zaza' => DocAnimal2::class,
+            'joseph' => DocAnimal2::class,
+            'sophie' => DocAnimal2::class,
+            'leo' => DocAnimal2::class, 
         ];
 
         $viewCounts = [];

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Document\DocAnimal1;
+use App\Document\DocAnimal2;
 use App\Entity\Animals;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,10 +25,10 @@ class Animal7Controller extends AbstractController
     #[Route('/coco', name: 'app_coco')]
     public function index(EntityManagerInterface $EntityManager,DocumentManager $dm ): Response
     {
-        $pageViewRepository = $dm->getRepository(DocAnimal1::class);
+        $pageViewRepository = $dm->getRepository(DocAnimal2::class);
         $pageView = $pageViewRepository->findOneBy(['page' => 'coco']);
         if (!$pageView) {
-            $pageView = new DocAnimal1();
+            $pageView = new DocAnimal2();
             $pageView->setPage('coco');
         }
         $pageView->incrementViewCount();

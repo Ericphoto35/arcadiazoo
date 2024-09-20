@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\SecurityBundle\Security as SecurityBundleSecurity;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use App\Document\DocAnimal1;
+use App\Document\DocAnimal2;
 
 class Animal4Controller extends AbstractController
 {
@@ -20,13 +21,13 @@ class Animal4Controller extends AbstractController
         $this->security = $security;
     }
 
-    #[Route('/léo', name: 'app_leo')]
+    #[Route('/Léo', name: 'app_leo')]
     public function index(EntityManagerInterface $EntityManager,DocumentManager $dm ): Response
     {
-        $pageViewRepository = $dm->getRepository(DocAnimal1::class);
+        $pageViewRepository = $dm->getRepository(DocAnimal2::class);
         $pageView = $pageViewRepository->findOneBy(['page' => 'leo']);
         if (!$pageView) {
-            $pageView = new DocAnimal1();
+            $pageView = new DocAnimal2();
             $pageView->setPage('leo');
         }
         $pageView->incrementViewCount();
